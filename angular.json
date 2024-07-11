@@ -65,10 +65,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "cdk-portal:build:production"
+              "buildTarget": "cdk-portal:build:production"
             },
             "development": {
-              "browserTarget": "cdk-portal:build:development"
+              "buildTarget": "cdk-portal:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -76,7 +76,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "cdk-portal:build"
+            "buildTarget": "cdk-portal:build"
           }
         },
         "test": {
