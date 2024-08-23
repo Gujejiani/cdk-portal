@@ -1,0 +1,24 @@
+<div class="accordion" (click)="toggleAccordionContent()">
+    <div class="accordion__header" [ngStyle]="headerStyles">
+      <div class="accordion__header-content">
+        <ng-content select="[header]"></ng-content>
+      </div>
+      <div
+        *ngIf="withArrow"
+        class="accordion__toggle"
+        [ngStyle]="toggleStyles"
+      >
+        <i
+          class="eb-icon-arrow-down"
+          [ngClass]="{'accordion__toggle-rotate': showContent, 'accordion__toggle-rotate--grey': greyArrow}"
+        ></i>
+      </div>
+    </div>
+    <div
+      #accordionContent
+      [ngStyle]="{'max-height':  calcAccordionMaxHeight(showContent, showMoreCount)}"
+      class="accordion__content"
+    >
+      <ng-content select="[content]"></ng-content>
+    </div>
+  </div>

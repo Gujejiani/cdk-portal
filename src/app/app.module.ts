@@ -7,11 +7,12 @@ import { PaymentStatusComponent } from './components/payment-status/payment-stat
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 import { PortalModule } from '@angular/cdk/portal';
 import { OverlayModule } from '@angular/cdk/overlay';
+import { GenericAccordionComponent } from './components/generic-accordion/generic-accordion.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    
+    GenericAccordionComponent
   ],
   imports: [
     BrowserModule,
